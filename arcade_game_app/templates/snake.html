@@ -1,0 +1,29 @@
+{% extends 'base_template.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/paint.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/snake.js' %}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+{% endblock title %}
+
+{% block content %}
+    <div id="home_wall">
+        <h1 align="center">Snake</h1>
+        <div class="container">
+            <div class="row">
+
+                <div>
+                    <canvas id="canvas" width="400" height="400"></canvas>
+                    <br><br>
+                     <div><button id="startGame">Start Game</button></div>
+                 </div>
+                        http://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Pac-Man.svg/1024px-Pac-Man.svg.png
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

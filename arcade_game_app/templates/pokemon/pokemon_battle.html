@@ -1,0 +1,89 @@
+{% extends 'base_template.html' %}
+{% load staticfiles %}
+
+
+{% block title %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pokemon/pokemon_main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pokemon/battle.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/pokemon/battle.js' %}"></script>
+{% endblock title %}
+
+{% block content %}
+
+
+{#battle window#}
+    <div class="row" id="battle_sight">
+        <div class="col-md-1"></div>
+
+{#        my pokemon#}
+        <div class="col-md-3">
+            <div id="my_pokemon"></div>
+
+        </div>
+
+{#        battle window#}
+        <div class="col-md-4">
+            <h1>pokemon battle!</h1>
+            <div id="battle_window">
+                <div class="row poke_status">
+                    <div  class="col-md-4">
+                        <div id="my_poke_energy"></div>
+                        <div id="condition_myP"></div>
+
+
+                    </div>
+                    <div id="animation" class="col-md-offset-1 col-md-6">
+                        <img id="battle_my_icon" class="ani" src="{% static "img/battle_my_icon.png" %}">
+                        <img id="battle_enemy_icon" class="ani" src="{% static "img/battle_enemy_icon.png" %}">
+                    </div>
+
+                </div>
+            </div>
+            <div id="discription" class=col-md-4""></div>
+
+            <button class="btn btn-primary" id="attack">attack</button>
+            <div id="after_battle_win">
+                <p>Yeah! Catch the pokemon?</p>
+                <button class="btn btn-primary" id="catch_yes">Sure!</button>
+                <button class="btn btn-primary" id="catch_no">I don't like it...</button>
+            </div>
+            <button class="btn btn-warning" id="after_battle_lose">lol ...try again?</button>
+
+        </div>
+
+{#        enemy pokemon#}
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div id="enemy_poke_energy"></div>
+                    <div id="condition_enP"></div>
+                </div>
+                <div class="col-md-9">
+                    <div id="enemy_pokemon"></div>
+                </div>
+            </div>
+            <button id="enemy_choice" class="btn btn-danger">Search in the wild</button>
+        </div>
+    </div>
+
+
+{#show my pokemons#}
+    <div class="row">
+        <div class="col-md-3 botton_left_side">
+            <div id="my_choice"></div>
+        </div>
+
+        <div class="col-md-6" align="center">
+            <h3 id="all">Please select your pokemon <span class="glyphicon glyphicon-circle-arrow-down"></span></h3>
+            <div id="battle_team"></div>
+        </div>
+
+        <div align="right" class="col-md-3 botton_right_side">
+            <h3><a style="text-decoration: none" href="{% url 'pokemon_lab' %}">Pokemon Lab <span class="glyphicon glyphicon-home"></span></a></h3>
+        </div>
+    </div>
+
+{% endblock content %}

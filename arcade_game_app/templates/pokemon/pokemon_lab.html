@@ -1,0 +1,76 @@
+{% extends 'base_template.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pokemon/pokemon_main.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/pokemon/lab.js' %}"></script>
+{% endblock title %}
+
+
+{% block content %}
+    <div id="bodylayout">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 align="center">Achievement</h1>
+                    </div>
+
+                    <div class="col-md-8">
+                        <table>
+                            <tr align="center">
+                                <td></td>
+                                <td><div id="y">Yours</div></td>
+                                <td><div id="a">All Users</div></td>
+                                <td><div id="t">Total</div></td>
+                            </tr>
+                            <tr align="center">
+                                <td>Pokemons</td>
+                                <td id="yPoke"></td>
+                                <td id="aPoke"></td>
+                                <td>718</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div id="Pokes" align="center"></div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div align="center">
+                    <div id="right_gif">
+                    </div>
+                    <hr>
+                    <div>
+                        <p><a style="text-decoration: none" href="{% url 'pokemon_load_game' %}">PREPARE FOR NEXT BATTLE!</a></p>
+                    </div>
+
+                    <hr>
+                    <h3>Remove Pokemons?</h3>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        Choose Team
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      </ul>
+                    </div>
+
+                    <div id="delete_team"></div>
+                    <div id="delete_poke"></div>
+                    <div id="delete_poke_check"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+

@@ -1,0 +1,63 @@
+body {
+    font-family: 'Righteous', cursive;
+    background-image: url('/static/img/wood_texture.png');
+
+}
+
+.navbar.navbar-inverse{
+    background-image: url('/static/img/purty_wood.png');
+    border: 2px solid grey;
+    border-radius: 0px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+#home_pokemon {
+    background-image: url('/static/img/home_pokemon.jpg');
+}
+#home_paint {
+    background-image: url('/static/img/home_paint.jpg');
+}
+#home_snake {
+    background-image: url('/static/img/home_snake.jpg');
+}
+#home_memory {
+    background-image: url('/static/img/under_construction.gif');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+#home_logo {
+    background-image: url('/static/img/c.gif');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+#home_hanoi {
+    background-image: url('/static/img/under_construction.gif');
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.home_img{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,25 @@
+{% extends 'base_template.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pokemon/pokemon_main.css' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/pokemon/poke_index.js' %}"></script>
+{% endblock title %}
+
+
+{% block content %}
+
+    <div id="pokemon">
+        <div class="container" align="center">
+            <h1><b><i>Pokemon world!</i></b></h1>
+            <span>
+                <button id="load_game" style="opacity: 0.6" class="btn btn-default"><i>Load Game</i></button>
+                <button id="new_game" style="opacity: 0.6" class="btn btn-default"><i>New Game</i></button>
+            </span>
+        </div>
+    </div>
+
+{% endblock content %}
